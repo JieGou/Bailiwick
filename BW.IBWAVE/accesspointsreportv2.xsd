@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetAccessPoints" targetNamespace="http://tempuri.org/DataSetAccessPoints.xsd" xmlns:mstns="http://tempuri.org/DataSetAccessPoints.xsd" xmlns="http://tempuri.org/DataSetAccessPoints.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DataSetAccessPoints" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Element">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PartID" type="xs:string" minOccurs="0" />
+              <xs:element name="Manufacturer" type="xs:string" minOccurs="0" />
+              <xs:element name="ModelNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="MACAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="IPAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="Band" type="xs:string" minOccurs="0" />
+              <xs:element name="Technology" type="xs:string" minOccurs="0" />
+              <xs:element name="SSID" type="xs:string" minOccurs="0" />
+              <xs:element name="Channel" type="xs:string" minOccurs="0" />
+              <xs:element name="OutputPower" type="xs:string" minOccurs="0" />
+              <xs:element name="FloorNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Latitude" type="xs:string" minOccurs="0" />
+              <xs:element name="Componentgroup" type="xs:string" minOccurs="0" />
+              <xs:element name="GroupFloorNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Azimuth" type="xs:string" minOccurs="0" />
+              <xs:element name="Height" type="xs:string" minOccurs="0" />
+              <xs:element name="Longitude" type="xs:string" minOccurs="0" />
+              <xs:element name="UTMZone" type="xs:string" minOccurs="0" />
+              <xs:element name="PartIDSorting" type="xs:string" minOccurs="0" />
+              <xs:element name="UniqueID" type="xs:string" minOccurs="0" />
+              <xs:element name="ImageFilename" type="xs:string" minOccurs="0" />
+              <xs:element name="PlanSortOrder" type="xs:string" minOccurs="0" />
+              <xs:element name="PowerPerChannel" type="xs:string" minOccurs="0" />
+              <xs:element name="CompositePower" type="xs:string" minOccurs="0" />
+              <xs:element name="RSCPRSRP" type="xs:string" minOccurs="0" />
+              <xs:element name="OrderNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ShowOrderNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="SerialNum" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProjectInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

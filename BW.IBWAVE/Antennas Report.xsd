@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Antennas_x0020_Report">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="Table1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TXTANTENNAEREPORTTITLE" type="xs:string" />
+							<xs:element name="TEXT28" type="xs:string" />
+							<xs:element name="TXTANTMODEL" type="xs:string" />
+							<xs:element name="TXTPROJECTNAME" type="xs:string" />
+							<xs:element name="TEXT34" type="xs:string" />
+							<xs:element name="TXTSOURCEID" type="xs:string" />
+							<xs:element name="TXTDESIGNCOMPANYTITLE" type="xs:string" />
+							<xs:element name="TXTANTGAIN" type="xs:string" />
+							<xs:element name="TXTDESIGNCOMPANY" type="xs:string" />
+							<xs:element name="TXTTOTALLOSSGAIN" type="xs:string" />
+							<xs:element name="TXTPAGE" type="xs:string" />
+							<xs:element name="TXTANTERP" type="xs:string" />
+							<xs:element name="TEXT42" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

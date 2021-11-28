@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28A61CD5-3C2E-4665-BB12-FA779E1196E5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyFirstProject</RootNamespace>
+    <AssemblyName>MyFirstProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="accoremgd">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\accoremgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcCui">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcCui.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acdbmgd">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\acdbmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acdbmgdbrep">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\acdbmgdbrep.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcDx">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcDx.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acmgd">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\acmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcMr">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcMr.DLL</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcSeamless">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcSeamless.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcTcMgd">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcTcMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcWindows">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AdUIMgd">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AdUIMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AdUiPalettes">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AdUiPalettes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AdWindows">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=5.8.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.5.8.2\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Xceed.Words.NET, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.2.1\lib\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BW.AMZ\Cls_AMZ_IdfAreas.cs" />
+    <Compile Include="BW.AMZ\Cls_AMZ_IdfCameras.cs" />
+    <Compile Include="BW.AMZ\Cls_AMZ_SecurityDoors_DrawJig_Entities.cs" />
+    <Compile Include="BW.AMZ\Cls_AMZ_TelComm.cs" />
+    <Compile Include="BW.AMZ\Cls_AMZ_TelComm_Atts.cs" />
+    <Compile Include="BW.AMZ\Cls_AMZ_TelComm_IdfTableCounts.cs" />
+    <Compile Include="BW.AMZ\Int_AMZ_TelCommAtts.cs" />
+    <Compile Include="BW.AMZ\Cls_AMZ_SecurityDoors.cs" />
+    <Compile Include="BW.AMZ\Uc_AMZ_SecurityDoors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW.AMZ\Uc_AMZ_SecurityDoors.Designer.cs">
+      <DependentUpon>Uc_AMZ_SecurityDoors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW.AMZ\Uc_AMZ_TelComm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW.AMZ\Uc_AMZ_TelComm.Designer.cs">
+      <DependentUpon>Uc_AMZ_TelComm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW.FDX\ClsXData.cs" />
+    <Compile Include="BW.IBWAVE\AccessPointsReport.cs" />
+    <Compile Include="BW.IBWAVE\accesspointsreportv2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>accesspointsreportv2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BW.IBWAVE\Antennas Report.cs">
+      <DependentUpon>Antennas Report.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BW.THD\Cls_THD_Atts.cs" />
+    <Compile Include="BW.THD\Cls_THD_DisplayAtts.cs" />
+    <Compile Include="BW.THD\Cls_THD_Frm.cs" />
+    <Compile Include="BW.THD\Frm_THD_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BW.THD\Frm_THD_MainForm.Designer.cs">
+      <DependentUpon>Frm_THD_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW.THD\Int_THD_AllAtts.cs" />
+    <Compile Include="BW.FDX\Cls_FDX_Main.cs" />
+    <Compile Include="BW.MMM\Frm_MMM_Host_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BW.MMM\Frm_MMM_Host_Form.Designer.cs">
+      <DependentUpon>Frm_MMM_Host_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW.TGT\Cls_TGT_Aps.cs" />
+    <Compile Include="BW.TGT\Cls_TGT_BlksToSelect.cs" />
+    <Compile Include="BW.TGT\Cls_TGT_Decoy.cs" />
+    <Compile Include="BW.TGT\Cls_TGT_Drop.cs" />
+    <Compile Include="BW.TGT\Cls_TGT_MainForm.cs" />
+    <Compile Include="BW.TGT\Cls_TGT_Phone.cs" />
+    <Compile Include="BW.TGT\Cls_TGT_Speaker.cs" />
+    <Compile Include="BW.TGT\Cls_TGT_TblCounts.cs" />
+    <Compile Include="BW.TGT\Cls_TGT_TblPagingCounts.cs" />
+    <Compile Include="BW.TGT\Cls_TGT_TblVoiceAndData.cs" />
+    <Compile Include="BW.TGT\Cls_TGT_TblVoiceAndDataT4.cs" />
+    <Compile Include="BW.TGT\Cls_TGT_TblVoiceAndDataTVS.cs" />
+    <Compile Include="BW.TGT\Frm_TGT_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BW.TGT\Frm_TGT_MainForm.Designer.cs">
+      <DependentUpon>Frm_TGT_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW.TGT\Int_TGT_AllAtts.cs" />
+    <Compile Include="BW.UPS\Frm_UPS_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BW.UPS\Frm_UPS_MainForm.Designer.cs">
+      <DependentUpon>Frm_UPS_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW.USB\Cls_USB_MainForm.cs" />
+    <Compile Include="BW.USB\Frm_USB_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BW.USB\Frm_USB_MainForm.Designer.cs">
+      <DependentUpon>Frm_USB_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW.WLG\Cls_WLG_AC_Tbls.cs" />
+    <Compile Include="BW.WLG\Cls_WLG_Atts.cs" />
+    <Compile Include="BW.WLG\Cls_WLG_BlksToSelect.cs" />
+    <Compile Include="BW.WLG\Cls_WLG_Frm.cs" />
+    <Compile Include="BW.WLG\Cls_WLG_HrdWr.cs" />
+    <Compile Include="BW.WLG\Cls_WLG_XL.cs" />
+    <Compile Include="BW.WLG\Frm_WLG_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BW.WLG\Frm_WLG_MainForm.Designer.cs">
+      <DependentUpon>Frm_WLG_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW.WLG\Int_WLG_AllAtts.cs" />
+    <Compile Include="BW\Cls_BW_DataGridErrHandlr.cs" />
+    <Compile Include="BW\Cls_BW_AirMagnetAps.cs" />
+    <Compile Include="BW\Cls_BW_AirMagnetReportInfo.cs" />
+    <Compile Include="BW.AMZ\Cls_AMZ_SecurityDoors_Atts.cs" />
+    <Compile Include="BW\Cls_BW_BlockAttsGetWap.cs" />
+    <Compile Include="BW\Cls_BW_BlockAttsGetWapDual.cs" />
+    <Compile Include="BW\Cls_BW_TP_AirMAGs.cs" />
+    <Compile Include="BW\Cls_BW_TP_APs.cs" />
+    <Compile Include="BW\Cls_BW_BlksToJig.cs" />
+    <Compile Include="BW\Cls_BW_BlksToSelect.cs" />
+    <Compile Include="BW\Cls_BW_BlockAttsGetWao.cs" />
+    <Compile Include="BW\Cls_BW_BomCounts_Wao.cs" />
+    <Compile Include="BW\Cls_BW_Plc_Atts.cs" />
+    <Compile Include="BW\Cls_BW_Plot_Pdf_Dwgs.cs" />
+    <Compile Include="BW\Cls_BW_TP_Blocks.cs" />
+    <Compile Include="BW\Cls_BW_TP_BomCounts.cs" />
+    <Compile Include="BW\Cls_BW_TP_Common.cs" />
+    <Compile Include="BW\Cls_BW_TP_Layouts.cs" />
+    <Compile Include="BW\Cls_BW_TP_TextExtract.cs" />
+    <Compile Include="BW\Cls_BW_TP_WAOs.cs" />
+    <Compile Include="BW\Cls_BW_TP_Word.cs" />
+    <Compile Include="BW\Frm_BW_DrawingPrepForm_Code.cs" />
+    <Compile Include="BW\Int_BW_AllAtts.cs" />
+    <Compile Include="BW\Cls_BW_Waos_Atts.cs" />
+    <Compile Include="BW\Cls_BW_WapsData2Dual_Atts.cs" />
+    <Compile Include="BW\Cls_BW_Waps_Atts.cs" />
+    <Compile Include="BW\Cls_BW_BomCounts_Wap.cs" />
+    <Compile Include="BW.AMZ\Cls_AMZ_SecurityDoors_BomCounts.cs" />
+    <Compile Include="BW\Cls_BW_Area.cs" />
+    <Compile Include="BW\Cls_BW_SelDynBlksAlso.cs" />
+    <Compile Include="BW\Uc_BW_Bom_Database.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW\Uc_BW_Bom_Database.Designer.cs">
+      <DependentUpon>Uc_BW_Bom_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Uc_BW_Database.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW\Uc_BW_Database.Designer.cs">
+      <DependentUpon>Uc_BW_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Uc_BW_SiteInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW\Uc_BW_SiteInfo.Designer.cs">
+      <DependentUpon>Uc_BW_SiteInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_AirMAGs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_AirMAGs.Designer.cs">
+      <DependentUpon>Uc_BW_TP_AirMAGs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_APs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_APs.Designer.cs">
+      <DependentUpon>Uc_BW_TP_APs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_IBWave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_IBWave.Designer.cs">
+      <DependentUpon>Uc_BW_TP_IBWave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_WAOs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_WAOs.Designer.cs">
+      <DependentUpon>Uc_BW_TP_WAOs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_Word.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_Word.Designer.cs">
+      <DependentUpon>Uc_BW_TP_Word.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_AttrExtract.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_AttrExtract.Designer.cs">
+      <DependentUpon>Uc_BW_TP_AttrExtract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_Blocks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_Blocks.Designer.cs">
+      <DependentUpon>Uc_BW_TP_Blocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_Layouts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BW\Uc_BW_TP_Layouts.Designer.cs">
+      <DependentUpon>Uc_BW_TP_Layouts.cs</DependentUpon>
+    </Compile>
+    <None Include="BW.IBWAVE\accesspointsreportv2.xsc">
+      <DependentUpon>accesspointsreportv2.xsd</DependentUpon>
+    </None>
+    <None Include="BW.IBWAVE\accesspointsreportv2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>accesspointsreportv2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BW.IBWAVE\accesspointsreportv2.xss">
+      <DependentUpon>accesspointsreportv2.xsd</DependentUpon>
+    </None>
+    <None Include="BW.IBWAVE\Antennas Report.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Examples\ClsCenterLineCircle.cs" />
+    <None Include="Examples\ClsCodeExamples.cs" />
+    <Compile Include="BW\Cls_BW_DbObjEvents.cs" />
+    <Compile Include="BW.AMZ\Cls_AMZ_SecurityDoors_DrawJig.cs" />
+    <Compile Include="BW\Cls_BW_Main.cs" />
+    <Compile Include="BW\Cls_BW_HandleObjTypes.cs" />
+    <Compile Include="BW\Cls_BW_DynBlkAlignmentJig.cs" />
+    <None Include="Examples\ClsPLineJig.cs" />
+    <Compile Include="BW\Cls_BW_Plot_Pdf_Dwg.cs" />
+    <None Include="Examples\ClsRecJig.cs" />
+    <Compile Include="BW\Cls_BW_Ribbon.cs" />
+    <None Include="Examples\ClsTblWBlk.cs" />
+    <None Include="Examples\ClsTextJig.cs" />
+    <Compile Include="BW\Cls_BW_Utility.cs" />
+    <None Include="Examples\ClsXData.cs" />
+    <Compile Include="BW.AMZ\Cls_AMZ_Main.cs" />
+    <Compile Include="BW\Cls_BW_Viewport_Info.cs" />
+    <Compile Include="BW\Cls_BW_Viewport_Select.cs" />
+    <Compile Include="Database\BoM.cs" />
+    <Compile Include="BW.AMZ\Frm_AMZ_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BW.AMZ\Frm_AMZ_MainForm.Designer.cs">
+      <DependentUpon>Frm_AMZ_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Frm_BW_DrawingPrepForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BW\Frm_BW_DrawingPrepForm.Designer.cs">
+      <DependentUpon>Frm_BW_DrawingPrepForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW.FDX\Frm_FDX_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BW.FDX\Frm_FDX_MainForm.Designer.cs">
+      <DependentUpon>Frm_FDX_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BW\Frm_BW_MainForm_AsControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BW\Frm_BW_MainForm_AsControl.Designer.cs">
+      <DependentUpon>Frm_BW_MainForm_AsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Model1.cs" />
+    <Compile Include="BW.AMZ\Int_AMZ_SecurityDoorsAtts.cs" />
+    <Compile Include="BW\Cls_BW_MovRotAtt.cs" />
+    <Compile Include="Examples\ClsMtextDataExtraction.cs" />
+    <Compile Include="MoreLinq\MoreEnumerable.DistinctBy.cs" />
+    <Compile Include="BW\NativeMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Table.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BW.AMZ\Frm_AMZ_MainForm.resx">
+      <DependentUpon>Frm_AMZ_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW.AMZ\Uc_AMZ_SecurityDoors.resx">
+      <DependentUpon>Uc_AMZ_SecurityDoors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW.AMZ\Uc_AMZ_TelComm.resx">
+      <DependentUpon>Uc_AMZ_TelComm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW.THD\Frm_THD_MainForm.resx">
+      <DependentUpon>Frm_THD_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW.MMM\Frm_MMM_Host_Form.resx">
+      <DependentUpon>Frm_MMM_Host_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW.TGT\Frm_TGT_MainForm.resx">
+      <DependentUpon>Frm_TGT_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW.UPS\Frm_UPS_MainForm.resx">
+      <DependentUpon>Frm_UPS_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW.USB\Frm_USB_MainForm.resx">
+      <DependentUpon>Frm_USB_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW.WLG\Frm_WLG_MainForm.resx">
+      <DependentUpon>Frm_WLG_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Frm_BW_DrawingPrepForm.resx">
+      <DependentUpon>Frm_BW_DrawingPrepForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW.FDX\Frm_FDX_MainForm.resx">
+      <DependentUpon>Frm_FDX_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Frm_BW_MainForm_AsControl.resx">
+      <DependentUpon>Frm_BW_MainForm_AsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Uc_BW_Bom_Database.resx">
+      <DependentUpon>Uc_BW_Bom_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Uc_BW_Database.resx">
+      <DependentUpon>Uc_BW_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Uc_BW_SiteInfo.resx">
+      <DependentUpon>Uc_BW_SiteInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Uc_BW_TP_AirMAGs.resx">
+      <DependentUpon>Uc_BW_TP_AirMAGs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Uc_BW_TP_APs.resx">
+      <DependentUpon>Uc_BW_TP_APs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Uc_BW_TP_IBWave.resx">
+      <DependentUpon>Uc_BW_TP_IBWave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Uc_BW_TP_WAOs.resx">
+      <DependentUpon>Uc_BW_TP_WAOs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Uc_BW_TP_Word.resx">
+      <DependentUpon>Uc_BW_TP_Word.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Uc_BW_TP_AttrExtract.resx">
+      <DependentUpon>Uc_BW_TP_AttrExtract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Uc_BW_TP_Blocks.resx">
+      <DependentUpon>Uc_BW_TP_Blocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BW\Uc_BW_TP_Layouts.resx">
+      <DependentUpon>Uc_BW_TP_Layouts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NetLoad.scr" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brand_logo.png" />
+    <None Include="Resources\large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usbank_lrg.png" />
+    <None Include="Resources\usbank_sml.png" />
+    <Content Include="Resources\ups.png" />
+    <Content Include="Resources\ups_lrg.png" />
+    <Content Include="Resources\ups_sml.png" />
+    <Content Include="Resources\walgreens.png" />
+    <Content Include="Resources\walgreens_lrg.png" />
+    <Content Include="Resources\walgreens_sml.png" />
+    <None Include="Resources\thehomedepot_sml.png" />
+    <None Include="Resources\thehomedepot_lrg.png" />
+    <None Include="Resources\target_sml.png" />
+    <None Include="Resources\target_lrg.png" />
+    <None Include="Resources\fedExG_sml.png" />
+    <None Include="Resources\fedExG_lrg.png" />
+    <None Include="Resources\3m_lrg.png" />
+    <None Include="Resources\3m_sml.png" />
+    <None Include="Resources\amazon_lrg.png" />
+    <None Include="Resources\amazon_sml.png" />
+    <Content Include="Resources\brand_logo_lrg.png" />
+    <Content Include="Resources\brand_logo_sml.png" />
+    <Content Include="Database\CadDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\CadDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>CadDatabase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BW.MCD\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

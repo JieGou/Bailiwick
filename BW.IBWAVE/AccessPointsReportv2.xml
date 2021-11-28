@@ -1,0 +1,334 @@
+<DataSetAccessPoints xmlns="http://tempuri.org/DataSetAccessPoints.xsd">
+  <Element>
+    <PartID>AP1</PartID>
+    <Manufacturer>Mist</Manufacturer>
+    <ModelNumber>AP43-US-STAN</ModelNumber>
+    <MACAddress />
+    <IPAddress>0.0.0.0</IPAddress>
+    <Band>2.4 GHz - Wi-Fi</Band>
+    <Technology>802.11ax</Technology>
+    <SSID />
+    <Channel>1</Channel>
+    <OutputPower>8.00</OutputPower>
+    <FloorNumber>Building 1: Floor 1</FloorNumber>
+    <Latitude>-</Latitude>
+    <Componentgroup>AllComponentGroups</Componentgroup>
+    <GroupFloorNumber>Building 1: Floor 1</GroupFloorNumber>
+    <Azimuth>N/A</Azimuth>
+    <Height>8.20</Height>
+    <Longitude>-</Longitude>
+    <UTMZone>-</UTMZone>
+    <PartIDSorting>AP0000000001</PartIDSorting>
+    <UniqueID>57</UniqueID>
+    <ImageFilename>C:\Users\Bailiwick Design\AppData\Local\iBwave\10316\Floor 1AP.png</ImageFilename>
+    <PlanSortOrder>0</PlanSortOrder>
+    <PowerPerChannel>9.85</PowerPerChannel>
+    <CompositePower>9.85</CompositePower>
+    <RSCPRSRP>-</RSCPRSRP>
+    <OrderNumber>1</OrderNumber>
+    <ShowOrderNumber>true</ShowOrderNumber>
+    <SerialNum />
+  </Element>
+  <Element>
+    <PartID>AP1</PartID>
+    <Manufacturer>Mist</Manufacturer>
+    <ModelNumber>AP43-US-STAN</ModelNumber>
+    <MACAddress />
+    <IPAddress>0.0.0.0</IPAddress>
+    <Band>5 GHz - Wi-Fi</Band>
+    <Technology>802.11ax</Technology>
+    <SSID />
+    <Channel>36</Channel>
+    <OutputPower>11.00</OutputPower>
+    <FloorNumber>Building 1: Floor 1</FloorNumber>
+    <Latitude>-</Latitude>
+    <Componentgroup>AllComponentGroups</Componentgroup>
+    <GroupFloorNumber>Building 1: Floor 1</GroupFloorNumber>
+    <Azimuth>N/A</Azimuth>
+    <Height>8.20</Height>
+    <Longitude>-</Longitude>
+    <UTMZone>-</UTMZone>
+    <PartIDSorting>AP0000000001</PartIDSorting>
+    <UniqueID>57</UniqueID>
+    <ImageFilename>C:\Users\Bailiwick Design\AppData\Local\iBwave\10316\Floor 1AP.png</ImageFilename>
+    <PlanSortOrder>0</PlanSortOrder>
+    <PowerPerChannel>14.85</PowerPerChannel>
+    <CompositePower>14.85</CompositePower>
+    <RSCPRSRP>-</RSCPRSRP>
+    <OrderNumber>1</OrderNumber>
+    <ShowOrderNumber>true</ShowOrderNumber>
+    <SerialNum />
+  </Element>
+  <Element>
+    <PartID>AP2</PartID>
+    <Manufacturer>Mist</Manufacturer>
+    <ModelNumber>AP43-US-STAN</ModelNumber>
+    <MACAddress />
+    <IPAddress>0.0.0.0</IPAddress>
+    <Band>2.4 GHz - Wi-Fi</Band>
+    <Technology>802.11ax</Technology>
+    <SSID />
+    <Channel>1</Channel>
+    <OutputPower>8.00</OutputPower>
+    <FloorNumber>Building 1: Floor 1</FloorNumber>
+    <Latitude>-</Latitude>
+    <Componentgroup>AllComponentGroups</Componentgroup>
+    <GroupFloorNumber>Building 1: Floor 1</GroupFloorNumber>
+    <Azimuth>N/A</Azimuth>
+    <Height>8.20</Height>
+    <Longitude>-</Longitude>
+    <UTMZone>-</UTMZone>
+    <PartIDSorting>AP0000000002</PartIDSorting>
+    <UniqueID>75</UniqueID>
+    <ImageFilename>C:\Users\Bailiwick Design\AppData\Local\iBwave\10316\Floor 1AP.png</ImageFilename>
+    <PlanSortOrder>0</PlanSortOrder>
+    <PowerPerChannel>9.85</PowerPerChannel>
+    <CompositePower>9.85</CompositePower>
+    <RSCPRSRP>-</RSCPRSRP>
+    <OrderNumber>2</OrderNumber>
+    <ShowOrderNumber>true</ShowOrderNumber>
+    <SerialNum />
+  </Element>
+  <Element>
+    <PartID>AP2</PartID>
+    <Manufacturer>Mist</Manufacturer>
+    <ModelNumber>AP43-US-STAN</ModelNumber>
+    <MACAddress />
+    <IPAddress>0.0.0.0</IPAddress>
+    <Band>5 GHz - Wi-Fi</Band>
+    <Technology>802.11ax</Technology>
+    <SSID />
+    <Channel>36</Channel>
+    <OutputPower>11.00</OutputPower>
+    <FloorNumber>Building 1: Floor 1</FloorNumber>
+    <Latitude>-</Latitude>
+    <Componentgroup>AllComponentGroups</Componentgroup>
+    <GroupFloorNumber>Building 1: Floor 1</GroupFloorNumber>
+    <Azimuth>N/A</Azimuth>
+    <Height>8.20</Height>
+    <Longitude>-</Longitude>
+    <UTMZone>-</UTMZone>
+    <PartIDSorting>AP0000000002</PartIDSorting>
+    <UniqueID>75</UniqueID>
+    <ImageFilename>C:\Users\Bailiwick Design\AppData\Local\iBwave\10316\Floor 1AP.png</ImageFilename>
+    <PlanSortOrder>0</PlanSortOrder>
+    <PowerPerChannel>14.85</PowerPerChannel>
+    <CompositePower>14.85</CompositePower>
+    <RSCPRSRP>-</RSCPRSRP>
+    <OrderNumber>2</OrderNumber>
+    <ShowOrderNumber>true</ShowOrderNumber>
+    <SerialNum />
+  </Element>
+  <Element>
+    <PartID>AP3</PartID>
+    <Manufacturer>Mist</Manufacturer>
+    <ModelNumber>AP43-US-OBER</ModelNumber>
+    <MACAddress />
+    <IPAddress>0.0.0.0</IPAddress>
+    <Band>2.4 GHz - Wi-Fi</Band>
+    <Technology>802.11ax</Technology>
+    <SSID />
+    <Channel>6</Channel>
+    <OutputPower>8.00</OutputPower>
+    <FloorNumber>Building 1: Floor 1</FloorNumber>
+    <Latitude>-</Latitude>
+    <Componentgroup>AllComponentGroups</Componentgroup>
+    <GroupFloorNumber>Building 1: Floor 1</GroupFloorNumber>
+    <Azimuth>N/A</Azimuth>
+    <Height>16.00</Height>
+    <Longitude>-</Longitude>
+    <UTMZone>-</UTMZone>
+    <PartIDSorting>AP0000000003</PartIDSorting>
+    <UniqueID>97</UniqueID>
+    <ImageFilename>C:\Users\Bailiwick Design\AppData\Local\iBwave\10316\Floor 1AP.png</ImageFilename>
+    <PlanSortOrder>0</PlanSortOrder>
+    <PowerPerChannel>9.85</PowerPerChannel>
+    <CompositePower>9.85</CompositePower>
+    <RSCPRSRP>-</RSCPRSRP>
+    <OrderNumber>3</OrderNumber>
+    <ShowOrderNumber>true</ShowOrderNumber>
+    <SerialNum />
+  </Element>
+  <Element>
+    <PartID>AP3</PartID>
+    <Manufacturer>Mist</Manufacturer>
+    <ModelNumber>AP43-US-OBER</ModelNumber>
+    <MACAddress />
+    <IPAddress>0.0.0.0</IPAddress>
+    <Band>5 GHz - Wi-Fi</Band>
+    <Technology>802.11ax</Technology>
+    <SSID />
+    <Channel>44</Channel>
+    <OutputPower>11.00</OutputPower>
+    <FloorNumber>Building 1: Floor 1</FloorNumber>
+    <Latitude>-</Latitude>
+    <Componentgroup>AllComponentGroups</Componentgroup>
+    <GroupFloorNumber>Building 1: Floor 1</GroupFloorNumber>
+    <Azimuth>N/A</Azimuth>
+    <Height>16.00</Height>
+    <Longitude>-</Longitude>
+    <UTMZone>-</UTMZone>
+    <PartIDSorting>AP0000000003</PartIDSorting>
+    <UniqueID>97</UniqueID>
+    <ImageFilename>C:\Users\Bailiwick Design\AppData\Local\iBwave\10316\Floor 1AP.png</ImageFilename>
+    <PlanSortOrder>0</PlanSortOrder>
+    <PowerPerChannel>14.85</PowerPerChannel>
+    <CompositePower>14.85</CompositePower>
+    <RSCPRSRP>-</RSCPRSRP>
+    <OrderNumber>3</OrderNumber>
+    <ShowOrderNumber>true</ShowOrderNumber>
+    <SerialNum />
+  </Element>
+  <Element>
+    <PartID>AP4</PartID>
+    <Manufacturer>Mist</Manufacturer>
+    <ModelNumber>AP43-US-OBER</ModelNumber>
+    <MACAddress />
+    <IPAddress>0.0.0.0</IPAddress>
+    <Band>2.4 GHz - Wi-Fi</Band>
+    <Technology>802.11ax</Technology>
+    <SSID />
+    <Channel>6</Channel>
+    <OutputPower>8.00</OutputPower>
+    <FloorNumber>Building 1: Floor 1</FloorNumber>
+    <Latitude>-</Latitude>
+    <Componentgroup>AllComponentGroups</Componentgroup>
+    <GroupFloorNumber>Building 1: Floor 1</GroupFloorNumber>
+    <Azimuth>N/A</Azimuth>
+    <Height>16.00</Height>
+    <Longitude>-</Longitude>
+    <UTMZone>-</UTMZone>
+    <PartIDSorting>AP0000000004</PartIDSorting>
+    <UniqueID>115</UniqueID>
+    <ImageFilename>C:\Users\Bailiwick Design\AppData\Local\iBwave\10316\Floor 1AP.png</ImageFilename>
+    <PlanSortOrder>0</PlanSortOrder>
+    <PowerPerChannel>9.85</PowerPerChannel>
+    <CompositePower>9.85</CompositePower>
+    <RSCPRSRP>-</RSCPRSRP>
+    <OrderNumber>4</OrderNumber>
+    <ShowOrderNumber>true</ShowOrderNumber>
+    <SerialNum />
+  </Element>
+  <Element>
+    <PartID>AP4</PartID>
+    <Manufacturer>Mist</Manufacturer>
+    <ModelNumber>AP43-US-OBER</ModelNumber>
+    <MACAddress />
+    <IPAddress>0.0.0.0</IPAddress>
+    <Band>5 GHz - Wi-Fi</Band>
+    <Technology>802.11ax</Technology>
+    <SSID />
+    <Channel>44</Channel>
+    <OutputPower>11.00</OutputPower>
+    <FloorNumber>Building 1: Floor 1</FloorNumber>
+    <Latitude>-</Latitude>
+    <Componentgroup>AllComponentGroups</Componentgroup>
+    <GroupFloorNumber>Building 1: Floor 1</GroupFloorNumber>
+    <Azimuth>N/A</Azimuth>
+    <Height>16.00</Height>
+    <Longitude>-</Longitude>
+    <UTMZone>-</UTMZone>
+    <PartIDSorting>AP0000000004</PartIDSorting>
+    <UniqueID>115</UniqueID>
+    <ImageFilename>C:\Users\Bailiwick Design\AppData\Local\iBwave\10316\Floor 1AP.png</ImageFilename>
+    <PlanSortOrder>0</PlanSortOrder>
+    <PowerPerChannel>14.85</PowerPerChannel>
+    <CompositePower>14.85</CompositePower>
+    <RSCPRSRP>-</RSCPRSRP>
+    <OrderNumber>4</OrderNumber>
+    <ShowOrderNumber>true</ShowOrderNumber>
+    <SerialNum />
+  </Element>
+  <Element>
+    <PartID>AP5</PartID>
+    <Manufacturer>Mist</Manufacturer>
+    <ModelNumber>AP43-US-OBER</ModelNumber>
+    <MACAddress />
+    <IPAddress>0.0.0.0</IPAddress>
+    <Band>2.4 GHz - Wi-Fi</Band>
+    <Technology>802.11ax</Technology>
+    <SSID />
+    <Channel>6</Channel>
+    <OutputPower>8.00</OutputPower>
+    <FloorNumber>Building 1: Floor 1</FloorNumber>
+    <Latitude>-</Latitude>
+    <Componentgroup>AllComponentGroups</Componentgroup>
+    <GroupFloorNumber>Building 1: Floor 1</GroupFloorNumber>
+    <Azimuth>N/A</Azimuth>
+    <Height>16.00</Height>
+    <Longitude>-</Longitude>
+    <UTMZone>-</UTMZone>
+    <PartIDSorting>AP0000000005</PartIDSorting>
+    <UniqueID>133</UniqueID>
+    <ImageFilename>C:\Users\Bailiwick Design\AppData\Local\iBwave\10316\Floor 1AP.png</ImageFilename>
+    <PlanSortOrder>0</PlanSortOrder>
+    <PowerPerChannel>9.85</PowerPerChannel>
+    <CompositePower>9.85</CompositePower>
+    <RSCPRSRP>-</RSCPRSRP>
+    <OrderNumber>5</OrderNumber>
+    <ShowOrderNumber>true</ShowOrderNumber>
+    <SerialNum />
+  </Element>
+  <Element>
+    <PartID>AP5</PartID>
+    <Manufacturer>Mist</Manufacturer>
+    <ModelNumber>AP43-US-OBER</ModelNumber>
+    <MACAddress />
+    <IPAddress>0.0.0.0</IPAddress>
+    <Band>5 GHz - Wi-Fi</Band>
+    <Technology>802.11ax</Technology>
+    <SSID />
+    <Channel>44</Channel>
+    <OutputPower>11.00</OutputPower>
+    <FloorNumber>Building 1: Floor 1</FloorNumber>
+    <Latitude>-</Latitude>
+    <Componentgroup>AllComponentGroups</Componentgroup>
+    <GroupFloorNumber>Building 1: Floor 1</GroupFloorNumber>
+    <Azimuth>N/A</Azimuth>
+    <Height>16.00</Height>
+    <Longitude>-</Longitude>
+    <UTMZone>-</UTMZone>
+    <PartIDSorting>AP0000000005</PartIDSorting>
+    <UniqueID>133</UniqueID>
+    <ImageFilename>C:\Users\Bailiwick Design\AppData\Local\iBwave\10316\Floor 1AP.png</ImageFilename>
+    <PlanSortOrder>0</PlanSortOrder>
+    <PowerPerChannel>14.85</PowerPerChannel>
+    <CompositePower>14.85</CompositePower>
+    <RSCPRSRP>-</RSCPRSRP>
+    <OrderNumber>5</OrderNumber>
+    <ShowOrderNumber>true</ShowOrderNumber>
+    <SerialNum />
+  </Element>
+  <ProjectInfo>
+    <Name>ProjectName</Name>
+    <Value>WILCR</Value>
+  </ProjectInfo>
+  <ProjectInfo>
+    <Name>FileName</Name>
+    <Value>C:\Users\Bailiwick Design\Desktop\UPS\WILCR.ibw</Value>
+  </ProjectInfo>
+  <ProjectInfo>
+    <Name>DesignerName</Name>
+    <Value>Randall Patterson</Value>
+  </ProjectInfo>
+  <ProjectInfo>
+    <Name>Company</Name>
+    <Value />
+  </ProjectInfo>
+  <ProjectInfo>
+    <Name>ProjectDate</Name>
+    <Value>2020-05-14T12:07:09</Value>
+  </ProjectInfo>
+  <ProjectInfo>
+    <Name>StartingQuantity</Name>
+    <Value />
+  </ProjectInfo>
+  <ProjectInfo>
+    <Name>EndingQuantity</Name>
+    <Value />
+  </ProjectInfo>
+  <ProjectInfo>
+    <Name>Difference</Name>
+    <Value />
+  </ProjectInfo>
+</DataSetAccessPoints>
