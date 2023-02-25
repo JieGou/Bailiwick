@@ -102,8 +102,7 @@ namespace MyFirstProject.BW
             Support.InitializeVars(out Document adoc, out Editor ed, out Autodesk.AutoCAD.DatabaseServices.Database db);
 
             ObjectId hostWallId = ObjectId.Null;
-            if (!ed.SelectEntity(out ObjectId id, "\nSelect object: "))
-                return;
+            if (!ed.SelectEntity(out ObjectId id, "\nSelect object: ")) return;
 
             List<TypedValue> dxf = NativeMethods.ImportsR22.AcdbEntGetTypedValues(id);
 
