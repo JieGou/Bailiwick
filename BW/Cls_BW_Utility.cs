@@ -1033,7 +1033,6 @@ namespace MyFirstProject.BW
             }
         }
 
-        //TODO 参照此方法解决获取天正门窗所在的墙id
         public static void BW_UpdateTitleBlockDateField()
         {
             Document doc = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
@@ -1052,9 +1051,7 @@ namespace MyFirstProject.BW
             {
                 try
                 {
-                    var nod = tx.GetObject(
-                        db.NamedObjectsDictionaryId,
-                        OpenMode.ForRead) as DBDictionary;
+                    var nod = tx.GetObject(db.NamedObjectsDictionaryId, OpenMode.ForRead) as DBDictionary;
 
                     if (!nod.Contains("ACAD_FIELDLIST"))
                     {

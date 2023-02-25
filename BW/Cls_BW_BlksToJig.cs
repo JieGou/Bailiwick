@@ -1,10 +1,30 @@
-﻿using Autodesk.AutoCAD.Runtime;
+﻿using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.EditorInput;
+using Autodesk.AutoCAD.Runtime;
+using System.Collections.Generic;
 
 namespace MyFirstProject.BW
 {
-    public class Cls_BW_BlksToJig
-    {       
+    internal static class Support
+    {
+        public static void InitializeVars(out Document adoc, out Editor ed, out Autodesk.AutoCAD.DatabaseServices.Database db)
+        {
+            adoc = Application.DocumentManager.MdiActiveDocument;
+            ed = adoc.Editor;
+            db = adoc.Database;
+        }
 
+        public static bool SelectEntity(this Editor ed, out ObjectId id, string msg = "\nSelect entity: ")
+        {
+            PromptEntityResult entRes = ed.GetEntity(msg);
+            id = entRes.ObjectId;
+            return entRes.Status == PromptStatus.OK;
+        }
+    }
+
+    public class Cls_BW_BlksToJig
+    {
         #region card Reader / camera
 
         [CommandMethod("c1")]
@@ -19,6 +39,7 @@ namespace MyFirstProject.BW
                 "dyn data 1 single"
                 );
         }
+
         [CommandMethod("c2")]
         public static void Camera1()
         {
@@ -32,8 +53,7 @@ namespace MyFirstProject.BW
                 );
         }
 
-        #endregion
-
+        #endregion card Reader / camera
 
         #region voice
 
@@ -49,6 +69,7 @@ namespace MyFirstProject.BW
                 "dyn voice 1 single"
                 );
         }
+
         [CommandMethod("v2")]
         public static void Voice2()
         {
@@ -61,10 +82,46 @@ namespace MyFirstProject.BW
                 "dyn voice 1 single wall"
                 );
         }
-        #endregion
 
+        #endregion voice
 
         #region waos
+
+        //Done 解决获取天正门窗所在的墙id
+        /// <summary>
+        /// 获取窗户的主体墙
+        /// </summary>
+        [CommandMethod("GetWindowHostWall")]
+        public void GetWindowHostWall()
+        {
+            SelectHostWall(DxfCode.SoftPointerId);
+        }
+
+        private static void SelectHostWall(DxfCode dxfCode)
+        {
+            Support.InitializeVars(out Document adoc, out Editor ed, out Autodesk.AutoCAD.DatabaseServices.Database db);
+
+            ObjectId hostWallId = ObjectId.Null;
+            if (!ed.SelectEntity(out ObjectId id, "\nSelect object: "))
+                return;
+
+            List<TypedValue> dxf = NativeMethods.ImportsR22.AcdbEntGetTypedValues(id);
+
+            foreach (var entry in dxf)
+            {
+                if (entry.TypeCode == (short)dxfCode
+                    && ((ObjectId)entry.Value).ObjectClass.IsDerivedFrom(RXClass.GetClass(typeof(Entity))))
+                {
+                    hostWallId = (ObjectId)entry.Value;
+                    break;
+                }
+            }
+
+            if (hostWallId.IsValid)
+            {
+                ed.SetImpliedSelection(new[] { hostWallId });
+            }
+        }
 
         //warehouse
         [CommandMethod("ww1")]
@@ -79,6 +136,7 @@ namespace MyFirstProject.BW
             "dyn data 1 single"
             );
         }
+
         [CommandMethod("ww2")]
         public static void Wao2()
         {
@@ -91,6 +149,7 @@ namespace MyFirstProject.BW
             "dyn data 2 dual"
             );
         }
+
         [CommandMethod("ww3")]
         public static void Wao3()
         {
@@ -103,6 +162,7 @@ namespace MyFirstProject.BW
             "dyn data 3 triple"
             );
         }
+
         [CommandMethod("ww4")]
         public static void Wao4()
         {
@@ -115,6 +175,7 @@ namespace MyFirstProject.BW
             "dyn data 4 quad"
             );
         }
+
         [CommandMethod("ww5")]
         public static void Wao5()
         {
@@ -127,6 +188,7 @@ namespace MyFirstProject.BW
             "dyn data 5 quint"
             );
         }
+
         [CommandMethod("ww6")]
         public static void Wao6()
         {
@@ -153,6 +215,7 @@ namespace MyFirstProject.BW
             "dyn data 1 single"
             );
         }
+
         [CommandMethod("ow2")]
         public static void oWao2()
         {
@@ -165,6 +228,7 @@ namespace MyFirstProject.BW
             "dyn data 2 dual"
             );
         }
+
         [CommandMethod("ow3")]
         public static void oWao3()
         {
@@ -177,6 +241,7 @@ namespace MyFirstProject.BW
             "dyn data 3 triple"
             );
         }
+
         [CommandMethod("ow4")]
         public static void oWao4()
         {
@@ -189,6 +254,7 @@ namespace MyFirstProject.BW
             "dyn data 4 quad"
             );
         }
+
         [CommandMethod("ow5")]
         public static void oWao5()
         {
@@ -201,6 +267,7 @@ namespace MyFirstProject.BW
             "dyn data 5 quint"
             );
         }
+
         [CommandMethod("ow6")]
         public static void oWao6()
         {
@@ -227,6 +294,7 @@ namespace MyFirstProject.BW
             "dyn data 1 single"
             );
         }
+
         [CommandMethod("mw2")]
         public static void mWao2()
         {
@@ -239,6 +307,7 @@ namespace MyFirstProject.BW
             "dyn data 2 dual"
             );
         }
+
         [CommandMethod("mw3")]
         public static void mWao3()
         {
@@ -251,6 +320,7 @@ namespace MyFirstProject.BW
             "dyn data 3 triple"
             );
         }
+
         [CommandMethod("mw4")]
         public static void mWao4()
         {
@@ -263,6 +333,7 @@ namespace MyFirstProject.BW
             "dyn data 4 quad"
             );
         }
+
         [CommandMethod("mw5")]
         public static void mWao5()
         {
@@ -275,6 +346,7 @@ namespace MyFirstProject.BW
             "dyn data 5 quint"
             );
         }
+
         [CommandMethod("mw6")]
         public static void mWao6()
         {
@@ -287,8 +359,8 @@ namespace MyFirstProject.BW
              "dyn data 6 sextet"
              );
         }
-        #endregion
 
+        #endregion waos
 
         #region waos liguid tight
 
@@ -304,6 +376,7 @@ namespace MyFirstProject.BW
              "dyn data 1 single"
              );
         }
+
         [CommandMethod("l2")]
         public static void Waol2()
         {
@@ -316,6 +389,7 @@ namespace MyFirstProject.BW
              "dyn data 2 dual"
              );
         }
+
         [CommandMethod("l3")]
         public static void Waol3()
         {
@@ -328,6 +402,7 @@ namespace MyFirstProject.BW
              "dyn data 3 triple"
              );
         }
+
         [CommandMethod("l4")]
         public static void Waol4()
         {
@@ -340,6 +415,7 @@ namespace MyFirstProject.BW
               "dyn data 4 quad"
               );
         }
+
         [CommandMethod("l5")]
         public static void Waol5()
         {
@@ -352,6 +428,7 @@ namespace MyFirstProject.BW
               "dyn data 5 quint"
               );
         }
+
         [CommandMethod("l6")]
         public static void Waol6()
         {
@@ -364,9 +441,8 @@ namespace MyFirstProject.BW
               "dyn data 6 sextet"
               );
         }
-       
-        #endregion
 
+        #endregion waos liguid tight
 
         #region plc's
 
@@ -382,6 +458,7 @@ namespace MyFirstProject.BW
                "dyn plc 1 single"
                );
         }
+
         [CommandMethod("p2")]
         public static void Plc2()
         {
@@ -394,6 +471,7 @@ namespace MyFirstProject.BW
                "dyn plc 2 dual"
                );
         }
+
         [CommandMethod("p3")]
         public static void Plc3()
         {
@@ -406,6 +484,7 @@ namespace MyFirstProject.BW
                "dyn plc 3 triple"
                );
         }
+
         [CommandMethod("p4")]
         public static void Plc4()
         {
@@ -418,6 +497,7 @@ namespace MyFirstProject.BW
                 "dyn plc 4 quad"
                 );
         }
+
         [CommandMethod("p5")]
         public static void Plc5()
         {
@@ -430,6 +510,7 @@ namespace MyFirstProject.BW
                 "dyn plc 5 quint"
                 );
         }
+
         [CommandMethod("p6")]
         public static void Plc6()
         {
@@ -442,9 +523,7 @@ namespace MyFirstProject.BW
                 "dyn plc 6 sextet"
                 );
         }
-      
-        #endregion
 
-
+        #endregion plc's
     }
 }
