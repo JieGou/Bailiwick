@@ -22,14 +22,14 @@ namespace MyFirstProject.BW
         #region MyRegion
 
         public static IEnumerable<int> FindMissingNums(List<string> list)
-        {            
+        {
             var lints = list.Select(s => int.Parse(s)).ToList();
             var result = Enumerable.Range(0, lints.Count - 1).Except(lints);
             return result;
         }
 
+        #endregion MyRegion
 
-        #endregion
         #region AppSettings
 
         public static ApplicationSettings applicationSettings = new ApplicationSettings();
@@ -65,7 +65,6 @@ namespace MyFirstProject.BW
             private Point m_AMZ_formLocation;
             private Point m_FDX_formLocation;
 
-
             public Point UPS_FormLocation
             {
                 get { return m_UPS_formLocation; }
@@ -89,6 +88,7 @@ namespace MyFirstProject.BW
                     }
                 }
             }
+
             public Point WLG_FormLocation
             {
                 get { return m_WLG_formLocation; }
@@ -100,6 +100,7 @@ namespace MyFirstProject.BW
                     }
                 }
             }
+
             public Point THD_FormLocation
             {
                 get { return m_THD_formLocation; }
@@ -111,6 +112,7 @@ namespace MyFirstProject.BW
                     }
                 }
             }
+
             public Point TGT_FormLocation
             {
                 get { return m_TGT_formLocation; }
@@ -122,6 +124,7 @@ namespace MyFirstProject.BW
                     }
                 }
             }
+
             public Point BW_FormLocation
             {
                 get { return m_BW_formLocation; }
@@ -133,6 +136,7 @@ namespace MyFirstProject.BW
                     }
                 }
             }
+
             public Point MMM_FormLocation
             {
                 get { return m_MMM_formLocation; }
@@ -144,6 +148,7 @@ namespace MyFirstProject.BW
                     }
                 }
             }
+
             public Point FDX_FormLocation
             {
                 get { return m_FDX_formLocation; }
@@ -155,6 +160,7 @@ namespace MyFirstProject.BW
                     }
                 }
             }
+
             public Point AMZ_FormLocation
             {
                 get { return m_AMZ_formLocation; }
@@ -166,7 +172,7 @@ namespace MyFirstProject.BW
                     }
                 }
             }
-            
+
             public void FixAllFormLocations()
             {
                 if (Cls_BW_Main.frm_BW_MainForm != null)
@@ -218,7 +224,7 @@ namespace MyFirstProject.BW
 
                 BW.Cls_BW_Utility.applicationSettings.SaveAppSettings();
             }
-            
+
             public void SaveAppSettings()
             {
                 StreamWriter myWriter = null;
@@ -244,7 +250,6 @@ namespace MyFirstProject.BW
                         myWriter.Close();
                     }
                 }
-
             }
 
             public bool LoadAppSettings()
@@ -294,8 +299,7 @@ namespace MyFirstProject.BW
             }
         }
 
-        #endregion
-
+        #endregion AppSettings
 
         #region Pi Report (Project Information Word Doc in project folder)
 
@@ -312,12 +316,11 @@ namespace MyFirstProject.BW
                     if (xlPackage.Workbook.Worksheets.Count > 0)
                         xlPackage.Workbook.Worksheets.Delete(1);
 
-
                     xlPackage.Workbook.Worksheets.Add(tabDesc);
 
                     ExcelWorksheet wsWAP = xlPackage.Workbook.Worksheets[1];
 
-                    //wsWAP.Cells["A1"].Value = clsBomCnts.Wap_C_DC_DropCeilingMount2802i;             
+                    //wsWAP.Cells["A1"].Value = clsBomCnts.Wap_C_DC_DropCeilingMount2802i;
 
                     PropertyInfo[] pis = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
                     //      Type[] tt = typeof(Int_3M_AllAtts).GetInterfaces();
@@ -354,11 +357,10 @@ namespace MyFirstProject.BW
             }
         }
 
-        #endregion
-
+        #endregion Pi Report (Project Information Word Doc in project folder)
 
         #region Attribute Extraction
-        
+
         public static bool CreateFileXlPull<T>(
          FileInfo newFile,
          IEnumerable<T> lst,
@@ -384,7 +386,7 @@ namespace MyFirstProject.BW
 
                     ExcelWorksheet wsWAP = xlPackage.Workbook.Worksheets[1];
 
-                    //wsWAP.Cells["A1"].Value = clsBomCnts.Wap_C_DC_DropCeilingMount2802i;             
+                    //wsWAP.Cells["A1"].Value = clsBomCnts.Wap_C_DC_DropCeilingMount2802i;
 
                     PropertyInfo[] pis = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
                     //      Type[] tt = typeof(Int_3M_AllAtts).GetInterfaces();
@@ -412,8 +414,7 @@ namespace MyFirstProject.BW
             }
         }
 
-        #endregion
-
+        #endregion Attribute Extraction
 
         #region checking current space in autocad
 
@@ -458,8 +459,7 @@ namespace MyFirstProject.BW
             return IsInLayout(doc) && !IsInLayoutPaper(doc);
         }
 
-        #endregion
-
+        #endregion checking current space in autocad
 
         /// <summary>
         /// this was for target
@@ -478,7 +478,7 @@ namespace MyFirstProject.BW
             using (Transaction tr = doc.TransactionManager.StartTransaction())
             {
                 string CurrSpace;
-                     
+
                 if (BW.Cls_BW_Utility.IsInModel(doc))
                 {
                     CurrSpace = BlockTableRecord.ModelSpace;
@@ -496,8 +496,6 @@ namespace MyFirstProject.BW
                 tr.Commit();
             }
         }
-
-
 
         public static ObjectId GetTextStyle(string nam, Document doc, Autodesk.AutoCAD.DatabaseServices.Database db)
         {
@@ -517,7 +515,6 @@ namespace MyFirstProject.BW
             return txtid;
         }
 
-
         public static TypedValue[] CreateFilterListForBlocks(
           List<string> blkNames
         )
@@ -533,7 +530,6 @@ namespace MyFirstProject.BW
             (int)DxfCode.BlockName,
            blkNames[0]
           )
-
         };
 
             // We have more than one block names to search for...
@@ -587,13 +583,12 @@ namespace MyFirstProject.BW
             }
         }
 
-
         /// <summary>
         /// ShowFormInContainerControl
         /// BW.Cls_BW_Utility.ShowFormInContainerControl(tpLayouts, BW.Cls_BW_Main.frm_BW_MainForm); - check for null
         /// </summary>
         /// <param name="ctl"></param>
-        /// <param name="frm"></param>        
+        /// <param name="frm"></param>
         public static void ShowFormInContainerControl(Control ctl, Form frm)
         {
             frm.TopLevel = false;
@@ -602,7 +597,6 @@ namespace MyFirstProject.BW
             frm.Visible = true;
             ctl.Controls.Add(frm);
         }
-
 
         public static string[] ReturnFilesList()
         {
@@ -623,7 +617,6 @@ namespace MyFirstProject.BW
                 return s;
         }
 
-
         public static double Conv_DegreeToRadian(double angle)
         {
             return Math.PI * angle / 180.0;
@@ -633,8 +626,6 @@ namespace MyFirstProject.BW
         {
             return angle * (180.0 / Math.PI);
         }
-
-
 
         public static void InsertBlock(string FileName, Point3d InsertionPoint, double Rotation = 0)
         {
@@ -655,10 +646,8 @@ namespace MyFirstProject.BW
                     BlockTableRecord btr = default(BlockTableRecord);
                     btr = (BlockTableRecord)tr.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForWrite);
 
-
                     using (btr)
                     {
-
                         BlockReference bref = new BlockReference(InsertionPoint, blkid);
 
                         Matrix3d mat = Matrix3d.Identity;
@@ -675,26 +664,21 @@ namespace MyFirstProject.BW
 
                         if (bref.IsDynamicBlock)
                         {
-
                             DynamicBlockReferencePropertyCollection dynBrefColl = bref.DynamicBlockReferencePropertyCollection;
 
                             foreach (DynamicBlockReferenceProperty dynBrefProps in dynBrefColl)
                             {
                                 if (dynBrefProps.PropertyName.ToUpper() == "VISIBILITY1")
                                 {
-
                                     dynBrefProps.Value = "M36";
                                 }
                             }
                         }
-
                     }
                     tr.Commit();
                 }
             }
         }
-
-
 
         public static void BtnZoomToAndSelectBlock_Click_Sub(DataGridView dgv, int colNum)
         {
@@ -710,7 +694,6 @@ namespace MyFirstProject.BW
             Cls_BW_Utility.ZoomObjects(idCol);
             Autodesk.AutoCAD.Internal.Utils.SelectObjects(Ids);
         }
-
 
         /// <summary>
         /// insert an autocad file into a drawing
@@ -750,39 +733,35 @@ namespace MyFirstProject.BW
                 }
                 acTrans.Commit();
             }
-
-
         }
-
-
 
         /// <summary>
         /// Returns true if the given Polyline is self-intersecting.
-        /// 
+        ///
         /// This API defines self-intersection as follows:
-        /// 
+        ///
         /// The Polyline is self-intersecting if any of the
         /// following conditions are true:
-        /// 
+        ///
         /// 1.  Any segment intersects any other segment.
-        /// 
+        ///
         /// 2.  Any interior vertex lies directly on any segment.
         ///     or is coincident with any other vertex.
-        /// 
+        ///
         /// 3.  If the polyline is effectively-closed (e.g.,
         ///     the first and last vertices are coincident, but
         ///     the PolyLine's Closed property is false), the
         ///     polyline is considered self-intersecting.
-        ///     
+        ///
         ///  4. A Closed polyline with less than 3 vertices
         ///     is considered to be self-intersecting.
-        ///     
-        /// The definition is intended to be consistent with the 
+        ///
+        /// The definition is intended to be consistent with the
         /// REGION command's definition of self-intersecting.
-        ///     
-        /// You may wish to interpret any of the above differently 
+        ///
+        /// You may wish to interpret any of the above differently
         /// depending on your specific functional requirements.
-        /// 
+        ///
         /// </summary>
         public static bool IsSelfIntersecting(this Autodesk.AutoCAD.DatabaseServices.Polyline pline)
         {
@@ -802,8 +781,6 @@ namespace MyFirstProject.BW
 
             return points.Count != numverts;
         }
-
-
 
         /// <summary>
         /// finds all the controls of a certain type on a form
@@ -843,8 +820,6 @@ namespace MyFirstProject.BW
                 c.Refresh();
             }
         }
-
-
 
         /// <summary>
         /// Creates a pivot view of the provided datatable, that is, all rows
@@ -892,13 +867,12 @@ namespace MyFirstProject.BW
             return pivotTable;
         }
 
-
         /// <summary>
         /// starts a process
         /// </summary>
         /// <param name="sPath"></param>
         public static void OpenExplorerToDirOrSharePoint(string sPath, bool fldr)
-        { 
+        {
             if (fldr) // folder
             {
                 ProcessStartInfo info = new ProcessStartInfo();
@@ -911,12 +885,8 @@ namespace MyFirstProject.BW
             else // sharepoint
             {
                 Process.Start(sPath);
-            }                   
+            }
         }
-
-    
-
-
 
         /// <summary>
         /// Returns Autocad ObjectId from Autocad Handle
@@ -927,17 +897,17 @@ namespace MyFirstProject.BW
         public static ObjectId ObjectIDFromHandle(
         Autodesk.AutoCAD.DatabaseServices.Database database,
         string AutocadHandle)
-    {
-        // Convert hexadecimal string to 64-bit integer
-        long ln = Convert.ToInt64(AutocadHandle, 16);
+        {
+            // Convert hexadecimal string to 64-bit integer
+            long ln = Convert.ToInt64(AutocadHandle, 16);
 
-        // Now create a Handle from the long integer
-        Handle hn = new Handle(ln);
+            // Now create a Handle from the long integer
+            Handle hn = new Handle(ln);
 
-        ObjectId id = database.GetObjectId(false, hn, 0);
+            ObjectId id = database.GetObjectId(false, hn, 0);
 
-        return id;
-    }
+            return id;
+        }
 
         /// <summary>
         /// Double buffer a windows control
@@ -985,7 +955,6 @@ namespace MyFirstProject.BW
             }
         }
 
-
         public static System.Data.DataTable ConvertToDataTable<T>(IEnumerable<T> data)
         {
             List<IDataRecord> list = data.Cast<IDataRecord>().ToList();
@@ -1016,15 +985,10 @@ namespace MyFirstProject.BW
             return table;
         }
 
-
-
-
-
-
         public static void BW_ZoomAllLayouts()
         {
             Document acDoc = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
-            
+
             if (IsInModel(acDoc))
             {
                 MessageBox.Show("Need to Switch to Paper Space.");
@@ -1034,7 +998,7 @@ namespace MyFirstProject.BW
             Editor acDocEd = acDoc.Editor;
             Autodesk.AutoCAD.DatabaseServices.Database acCurDb = acDoc.Database;
 
-            //int UCSICON = System.Convert.ToInt32(Application.GetSystemVariable("UCSICON"));                        
+            //int UCSICON = System.Convert.ToInt32(Application.GetSystemVariable("UCSICON"));
             //Application.SetSystemVariable("UCSICON", 3);
 
             using (acDoc.LockDocument())
@@ -1056,7 +1020,7 @@ namespace MyFirstProject.BW
 
                         if (!Cls_BW_Utility.IsInLayoutPaper(acDoc))
                         {
-                            acDocEd.WriteMessage("\n  Not in Paperspace");                            
+                            acDocEd.WriteMessage("\n  Not in Paperspace");
                         }
                         else
                         {
@@ -1069,7 +1033,7 @@ namespace MyFirstProject.BW
             }
         }
 
-
+        //TODO 参照此方法解决获取天正门窗所在的墙id
         public static void BW_UpdateTitleBlockDateField()
         {
             Document doc = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
@@ -1134,10 +1098,7 @@ namespace MyFirstProject.BW
                     tx.Abort();
                 }
             }
-
-
         }
-                
 
         public static List<Layout> GetLayouts()
         {
@@ -1151,7 +1112,6 @@ namespace MyFirstProject.BW
                 //  using (acDoc.LockDocument())
                 using (Transaction tr = db.TransactionManager.StartTransaction())
                 {
-                   
                     DBDictionary layoutDict = (DBDictionary)db.LayoutDictionaryId.GetObject(OpenMode.ForRead);
 
                     foreach (DBDictionaryEntry entry in layoutDict)
@@ -1160,8 +1120,6 @@ namespace MyFirstProject.BW
                         {
                             layouts.Add((Layout)tr.GetObject(entry.Value, OpenMode.ForRead));
                         }
-
-
                     }
                     layouts.Sort((l1, l2) => l1.TabOrder.CompareTo(l2.TabOrder));
                 }
@@ -1178,7 +1136,6 @@ namespace MyFirstProject.BW
 
             return layouts;
         }
-        
 
         public static void RemoveAnnotativeProperties(string DxfCode)
         {
@@ -1190,7 +1147,7 @@ namespace MyFirstProject.BW
             {
                 TypedValue[] acTypValAr = new TypedValue[]
                     { new TypedValue((int)Autodesk.AutoCAD.DatabaseServices.DxfCode.Start, DxfCode) };
-                      
+
                 SelectionFilter acSelFtr = new SelectionFilter(acTypValAr);
 
                 PromptSelectionResult acSSPrompt = acDoc.Editor.GetSelection(acSelFtr);
@@ -1203,9 +1160,9 @@ namespace MyFirstProject.BW
                     {
                         if (acSSObj != null)
                         {
-                            Entity ent = (Entity) acTrans.GetObject(acSSObj.ObjectId, OpenMode.ForWrite);
+                            Entity ent = (Entity)acTrans.GetObject(acSSObj.ObjectId, OpenMode.ForWrite);
 
-                            if (ent is BlockReference )// System.Convert.ToString(ent.GetType()) == "Autodesk.AutoCAD.DatabaseServices.BlockReference")
+                            if (ent is BlockReference)// System.Convert.ToString(ent.GetType()) == "Autodesk.AutoCAD.DatabaseServices.BlockReference")
                             {
                                 BlockReference br = (BlockReference)acTrans.GetObject(acSSObj.ObjectId, OpenMode.ForRead);
                                 if (br != null)
@@ -1225,10 +1182,9 @@ namespace MyFirstProject.BW
                                         BlockTableRecord btr = (BlockTableRecord)acTrans.GetObject(ids, OpenMode.ForRead);
                                         if (btr.Name == nam) //br.Name)
                                         {
-
                                             btr.UpgradeOpen();
                                             btr.Annotative = AnnotativeStates.False;
-                                       //     debug.WriteLine(btr.Name + " Ano = " + btr.Annotative.ToString());
+                                            //     debug.WriteLine(btr.Name + " Ano = " + btr.Annotative.ToString());
                                         }
                                     }
                                 }
@@ -1236,7 +1192,7 @@ namespace MyFirstProject.BW
                             else
                             {
                                 ent.Annotative = AnnotativeStates.False;
-                           //     Console.WriteLine(ent.ToString() + " Ano = " + ent.Annotative.ToString());
+                                //     Console.WriteLine(ent.ToString() + " Ano = " + ent.Annotative.ToString());
                             }
                         }
                     }
@@ -1246,11 +1202,8 @@ namespace MyFirstProject.BW
             }
         }
 
-
-
         #region xml
 
-        
         public static T Deserialize<T>(string input) where T : class
         {
             System.Xml.Serialization.XmlSerializer ser = new System.Xml.Serialization.XmlSerializer(typeof(T));
@@ -1270,9 +1223,8 @@ namespace MyFirstProject.BW
                 xmlSerializer.Serialize(textWriter, ObjectToSerialize);
                 return textWriter.ToString();
             }
-        } 
-        #endregion
+        }
 
-
+        #endregion xml
     }
 }
