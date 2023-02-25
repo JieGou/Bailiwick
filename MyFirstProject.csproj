@@ -53,69 +53,45 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="accoremgd">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\accoremgd.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="AcCui">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcCui.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="acdbmgd">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\acdbmgd.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="acdbmgdbrep">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\acdbmgdbrep.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2022\AcCui.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AcDx">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcDx.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2022\AcDx.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="acmgd">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\acmgd.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2022\acmgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AcMr">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcMr.DLL</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2022\AcMr.DLL</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AcSeamless">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcSeamless.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2022\AcSeamless.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AcTcMgd">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcTcMgd.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2022\AcTcMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AcWindows">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AcWindows.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2022\AcWindows.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AdUIMgd">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AdUIMgd.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2022\AdUIMgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AdUiPalettes">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AdUiPalettes.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2022\AdUiPalettes.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AdWindows">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\AdWindows.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2022\AdWindows.dll</HintPath>
       <Private>False</Private>
-    </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="EPPlus, Version=5.8.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
-      <HintPath>packages\EPPlus.5.8.2\lib\net35\EPPlus.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
-      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -135,9 +111,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
-    <Reference Include="Xceed.Words.NET, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
-      <HintPath>..\packages\DocX.1.2.1\lib\Xceed.Words.NET.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BW.AMZ\Cls_AMZ_IdfAreas.cs" />
@@ -481,7 +454,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="NetLoad.scr" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -515,13 +487,6 @@
     <None Include="Resources\amazon_sml.png" />
     <Content Include="Resources\brand_logo_lrg.png" />
     <Content Include="Resources\brand_logo_sml.png" />
-    <Content Include="Database\CadDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database\CadDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>CadDatabase.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6">
@@ -543,6 +508,29 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoCAD.NET.Core">
+      <ExcludeAssets>runtime</ExcludeAssets>
+      <Version>22.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="DocX">
+      <Version>1.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="EntityFramework">
+      <Version>6.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="EPPlus">
+      <Version>5.8.2</Version>
+    </PackageReference>
+    <PackageReference Include="MoreLinq.Source.MoreEnumerable.DistinctBy">
+      <Version>1.0.2</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="SharpZipLib">
+      <Version>0.86.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
